@@ -36,8 +36,8 @@ function Home({ posts_user, getUserPosts }) {
       }
 <div className="overflow-y-auto h-full mt-2 scrollbar-hide rounded-t-2xl">
   
-        {posts?.length !== 0 ? posts.map(post => (
-          <div key={post.id} className='my-2 '>
+        {posts?.length !== 0 ? posts?.map(post => (
+          <div key={post?.id} className='my-2 '>
             <PostUI getAllPosts={getAllPosts} post={post} getUserPosts={getUserPosts} />
           </div>
         )) : <LoadingSkeleton />}
@@ -47,3 +47,4 @@ function Home({ posts_user, getUserPosts }) {
 }
 
 export default Home
+
